@@ -1,0 +1,35 @@
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="org.kuesji.voidlauncher"
+	android:versionCode="3"
+  android:versionName="18.3.2021">
+
+	<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+
+	<application
+		android:label="void launcher"
+		android:icon="@mipmap/app"
+		android:persistent="true"
+		android:largeHeap="true">
+
+		<activity
+			android:name=".HomeActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="singleInstance"
+			android:resizeableActivity="false"
+			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.HOME"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+
+	</application>
+
+</manifest>
